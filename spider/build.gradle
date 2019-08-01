@@ -1,0 +1,19 @@
+apply plugin: 'java-library'
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    api 'org.jsoup:jsoup:1.12.1'
+    api group: 'dom4j', name: 'dom4j', version: '1.6.1'
+    api group: 'org.apache.commons', name: 'commons-lang3', version: '3.9'
+    api group: 'org.apache.httpcomponents', name: 'httpclient', version: '4.5.9'
+    testCompile group: 'org.junit.jupiter', name: 'junit-jupiter-api', version: '5.5.1'
+}
+
+sourceCompatibility = "8"
+targetCompatibility = "8"
+
+
+
+tasks.withType(JavaCompile) {
+    options.encoding = "UTF-8"
+}
